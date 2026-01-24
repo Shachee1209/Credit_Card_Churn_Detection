@@ -84,11 +84,17 @@ Since the dataset is imbalanced, accuracy alone is not sufficient for evaluating
 
 |ML Model Name                  | Observation about Model Performance 
 | **Logistic Regression**       | Logistic Regression provided a strong baseline performance with stable and interpretable results. It achieved reasonable precision and recall, but its linear decision boundary limited its ability to capture complex non-linear patterns present in customer behavior, resulting in comparatively lower F1 score and AUC than ensemble models. |
-| **Decision Tree**             | The Decision Tree model was able to capture non-linear relationships and showed improved recall compared to Logistic Regression. However, it exhibited signs of overfitting, leading to reduced generalization performance on unseen test data, especially reflected in lower AUC and MCC values.                                                |
+
+| **Decision Tree**             | The Decision Tree model was able to capture non-linear relationships and showed improved recall compared to Logistic Regression. However, it exhibited signs of overfitting, leading to reduced generalization performance on unseen test data, especially reflected in lower AUC and MCC values.                                              |
+
 | **k-Nearest Neighbors (kNN)** | kNN showed moderate performance but was sensitive to feature scaling and the choice of the value of *k*. Its performance degraded in higher-dimensional feature space, and it struggled to effectively separate churners from non-churners, resulting in lower recall and inconsistent F1 score.                                                 |
-| **Naive Bayes**               | Naive Bayes performed efficiently with fast computation but relied on the strong assumption of feature independence. This assumption was not fully satisfied in the dataset, leading to lower predictive performance and reduced F1 score compared to other models, although recall was relatively acceptable.                                   |
-| **Random Forest (Ensemble)**  | Random Forest significantly improved performance by reducing overfitting through ensemble learning. It achieved higher AUC, F1 score, and MCC compared to individual models, demonstrating better generalization and robustness in identifying churners while maintaining balanced precision and recall.                                         |
-| **XGBoost (Ensemble)**        | XGBoost delivered the best overall performance among all models. Its gradient boosting framework effectively captured complex non-linear relationships and feature interactions, resulting in the highest AUC and F1 score. This makes XGBoost the most suitable model for churn prediction in this dataset.                                     |
+
+| **Naive Bayes**               | Naive Bayes performed efficiently with fast computation but relied on the strong assumption of feature independence. This assumption was not fully satisfied in the dataset, leading to lower predictive performance and reduced F1 score compared to other models, although recall was relatively acceptable.                                  |
+
+| **Random Forest (Ensemble)**  | Random Forest significantly improved performance by reducing overfitting through ensemble learning. It achieved higher AUC, F1 score, and MCC compared to individual models, demonstrating better generalization and robustness in identifying churners while maintaining balanced precision and recall.                                        |
+
+| **XGBoost (Ensemble)**        | XGBoost delivered the best overall performance among all models. Its gradient boosting framework effectively captured complex non-linear relationships and feature interactions, resulting in the highest AUC and F1 score. This makes XGBoost the most suitable model for churn prediction in this dataset.                                        |
+
 
 
 From the comparison, ensemble models such as Random Forest and XGBoost generally performed better than individual models due to their ability to capture complex non-linear patterns and reduce overfitting. Logistic Regression provided a strong baseline with good interpretability, while tree-based models offered better recall for churn detection.
